@@ -1,5 +1,6 @@
 package bois.chernichkin.javatesttask;
 
+import bois.chernichkin.javatesttask.Logic.CreateListSelfTest;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -18,6 +19,13 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
+        CreateListSelfTest test = new CreateListSelfTest();
+        test.fillListTest();
+        test.getListTest();
+        test.getCircleTest();
+        test.getRectangleTest();
+        test.getTriangleTest();
+
         launch();
     }
 }
