@@ -9,11 +9,19 @@ public class CreateListSelfTest {
         CreateList createList = new CreateList();
         int expectedSize = 3;
 
-        if (createList.getList().size() == expectedSize) {
-            System.out.println("✅ fillListTest:\t\tPASSED");
-        } else {
+        if (!(createList.getCircle() instanceof Circle)) {
             System.out.println("❌ fillListTest:\t\tFAILED");
+            return;
         }
+        if (!(createList.getRectangle() instanceof Rectangle)) {
+            System.out.println("❌ fillListTest:\t\tFAILED");
+            return;
+        }
+        if (!(createList.getTriangle() instanceof Triangle)) {
+            System.out.println("❌ fillListTest:\t\tFAILED");
+            return;
+        }
+        System.out.println("✅ fillListTest:\t\tPASSED");
     }
 
     public void getListTest() {
